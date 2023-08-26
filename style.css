@@ -1,0 +1,122 @@
+/* Import custom font */
+@font-face {
+  font-family: 'digital-7';
+  font-style: normal;
+  src: local('digital-7'), url(digital-7.woff2) format('truetype');
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Clock container styles */
+#clock-container-analogue {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(black 70%, lightgray 30%);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: -8px 19px 11px 5px rgba(138, 138, 138, 0.6);
+  position: relative;
+}
+
+/* Clock hands base styles */
+.hour-hand, .minute-hand, .second-hand {
+  position: absolute;
+}
+
+/* Clock hands size */
+.hour-hand, .hour-rotation {
+  width: 160px;
+  height: 160px;
+}
+
+.minute-hand, .minute-rotation {
+  width: 240px;
+  height: 240px;
+}
+
+.second-hand, .second-rotation {
+  width: 230px;
+  height: 300px;
+}
+
+/* Clock hands rotation styles */
+.hour-rotation, .minute-rotation, .second-rotation {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Styles for the hand extensions */
+.hour-rotation::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100px;
+  background: #fefefe;
+  z-index: 9;
+}
+
+.minute-rotation::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 140px;
+  background: #fefefe;
+  z-index: 10;
+}
+
+.second-rotation::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #ffffff;
+  z-index: 11;
+}
+
+/* Digital clock container styles */
+.clock-container-digital {
+  margin-top: 5rem;
+  text-align: center;
+  font-family: 'digital-7', sans-serif;
+  font-size: 4rem;
+  background: #000000;
+  color: #ffffff;
+  letter-spacing: 3px;
+  min-width: 300px;
+  padding: 1rem 0 0.4rem;
+}
