@@ -23,6 +23,7 @@ $ npm run build
 $ npm run preview
 ```
 3. The vite preview command will boot up a local static web server that serves the files from dist at http://localhost:4173. It's an easy way to check if the production build looks OK in your local environment.
+4. You can check out a deployed version of the App on GitHub Pages by visiting the following URL: https://jantonca.github.io/clock-javascript/
 
 ### Usage
 
